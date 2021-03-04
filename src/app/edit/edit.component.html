@@ -1,0 +1,29 @@
+<div style="overflow-y: hidden;">
+    <div class="modal-content">
+        <div class="modal-header">
+    <h1 class="modal-title">Edit Record</h1>
+   <div class="modal-dialog modal-lg">
+    <form [formGroup]='editForm' style="width: 500px;height:200px">
+        <div class="input-group mb-3">
+            <input type="number" class="form-control" placeholder="Id" aria-label="Name" formControlName="id" readonly>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Name" aria-label="Name" formControlName="Name">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Position" aria-label="Position"
+                formControlName="Position">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Qualification" aria-label="Qualification"
+                formControlName="Qualification">
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closepop()" style="width: 100px;">Close</button>
+    <button type="button" class="btn btn-primary" (click)="update()" style="width: 100px;">Update</button>
+  </div>
+  </div>
+  </div>
+</div>
