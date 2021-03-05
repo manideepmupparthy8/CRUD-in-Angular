@@ -19,16 +19,17 @@ export class TableComponent implements OnInit {
   ngOnInit() {
     this.employees = this.crudService.employees
   }
-  deleteRecord(id: any) {
-    this.crudService.delete(id)
+  deleteRecord(i: any) {
+    this.crudService.delete(i)
     console.log("vxzgfdg");
     this.employees = [];
     this.employees = this.crudService.employees
   }
 
-  editRecord(id: any) {
-    this.router.navigate(['/edit', id]);
-    console.log(id);
+  editRecord(i: any) {
+    this.router.navigate(['/edit', i]);
+    sessionStorage.setItem("index",i)
+    console.log(i);
   }
   addRecord() {
     this.router.navigate(['/add'])
